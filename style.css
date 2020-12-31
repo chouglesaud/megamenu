@@ -1,6 +1,49 @@
 .uk-navbar-dropdown-width-4:not(.uk-navbar-dropdown-stack) {
   width: 100% !important;
+  height: 90vh !important;
 }
 .uk-navbar-dropdown-grid > :not(.uk-first-column)::before {
   all: unset;
+}
+#main-menu {
+  border-right: 2px solid #fff;
+}
+#main-menu li {
+  padding: 10px;
+}
+#main-menu li a {
+  color: #fff !important;
+  padding: 8px;
+  font-size: 1rem;
+}
+#main-menu li a:hover {
+  background-color: #089efb;
+}
+#main-menu li > a:visited {
+  background-color: #089efb;
+  color: #fff;
+}
+.uk-active {
+  background-color: red;
+  color: #fff;
+}
+
+.report-panel {
+  width: 100%;
+  display: flex;
+}
+.report-list {
+  display: none;
+}
+.report-panel ul li a:hover .factory-master {
+  color: red;
+  display: block !important;
+}
+#submenu {
+  margin-left: 30px;
+}
+#submenu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
 }

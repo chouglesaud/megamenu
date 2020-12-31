@@ -20,120 +20,163 @@
           <ul class="uk-navbar-nav">
             <li>
               <a href="#">MBHM OFFICE</a>
-              <div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+              <div
+                class="uk-navbar-dropdown uk-navbar-dropdown-width-4"
+                style="background-color: #4d7dfa"
+              >
                 <div class="uk-navbar-dropdown-grid uk-child-width-1-4" uk-grid>
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active"><a href="#">Company Master</a></li>
-                      <li><a href="#">Company Details</a></li>
-                      <li><a href="#">Employee Details</a></li>
-                      <li><a href="#">Supplier Details</a></li>
-                      <li><a href="#">Work Nature Master</a></li>
-                      <li><a href="#">Attendance Process Master</a></li>
-                      <li><a href="#">Item Master</a></li>
-                      <li><a href="#">Category Master</a></li>
-                      <li><a href="#">Designation Master</a></li>
-                      <li class="uk-nav-divider"></li>
-                    </ul>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active">
-                        <a href="#">MBHM Collection Master</a>
-                      </li>
-                      <li><a href="#">HCU Type</a></li>
-                      <li><a href="#">Bag Details</a></li>
-                      <li><a href="#">MHBM Zone master</a></li>
-                      <li><a href="#">MPCB Zone Master</a></li>
-                      <li><a href="#">Vehicle Details</a></li>
-                      <li><a href="#">Regional Master</a></li>
-                      <li><a href="#">Division Master</a></li>
-                      <li><a href="#">Route Details</a></li>
-                      <li><a href="#">Daily Route Details</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active"><a href="#">Factory Master</a></li>
-                      <li><a href="#">Segregation Master</a></li>
-                      <li><a href="#">Consumption Master</a></li>
-                      <li class="uk-nav-divider"></li>
-                    </ul>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active">
-                        <a href="#">MBHM Collection Master 2</a>
-                      </li>
-                      <li><a href="#">Taluka Master</a></li>
-                      <li><a href="#">Distric Master</a></li>
-                      <li><a href="#">Type Master</a></li>
-                      <li><a href="#">City Master</a></li>
-                      <li><a href="#">Dr. Association</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active">
-                        <a href="#">Factory Transaction</a>
-                      </li>
-                      <li><a href="#">Incineration Activity</a></li>
-                      <li><a href="#">Incineration Log Sheets</a></li>
-                      <li><a href="#">Log Book for Autoclave</a></li>
-                      <li><a href="#">ETP Work Sheet</a></li>
-                      <li><a href="#">Shredder Report</a></li>
-                      <li><a href="#">Consumption</a></li>
-                      <li><a href="#">Segregation</a></li>
-                      <li><a href="#">Chemical Treatment Report</a></li>
-                      <li><a href="#">Presenty Remark</a></li>
-                    </ul>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-nav-divider"></li>
+                  <div class="report-panel">
+                    <div id="main-menu">
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li>
+                          <a href="#" data-submenu="company-master"
+                            >Company Master</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="factory-master"
+                            >Factory Master</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="factory-transaction"
+                            >Factory Transaction</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="factory-transaction-summary"
+                            >Factory Transaction Summary</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="mbhm-collection-master"
+                            >MBHM Collection Master</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="mbhm-collection-master-2"
+                            >MBHM Collection Master 2</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-submenu="communication"
+                            >Communication</a
+                          >
+                        </li>
 
-                      <li class="uk-active">
-                        <a href="#">Communication</a>
-                      </li>
-                      <li><a href="#">Task Management</a></li>
-                      <li><a href="#">BMW Registration</a></li>
-                      <li><a href="#">Bed Entry</a></li>
-                      <li><a href="#">Purchase Order</a></li>
-                      <li><a href="#">Bags Purchase</a></li>
-                      <li><a href="#">Delivery Challan Book Register</a></li>
-                      <li><a href="#">Delivery Challan</a></li>
-                      <li><a href="#">Issue to Driver</a></li>
-                      <li><a href="#">Quatation Renewal of Agreement</a></li>
-                      <li><a href="#">Receipt Book Issue Register</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active">
-                        <a href="#">Factory Transaction Summary</a>
-                      </li>
-                      <li><a href="#">Shredder Summary Report</a></li>
-                      <li><a href="#">Chemical Treatment Summary Report</a></li>
-                    </ul>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-nav-divider"></li>
+                        <li>
+                          <a href="#" data-submenu="letter-print"
+                            >Letter Print</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="submenu">
+                      <div class="report-list mbhm-collection-master">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">HCU Type</a></li>
+                          <li><a href="#">Bag Details</a></li>
+                          <li><a href="#">MHBM Zone master</a></li>
+                          <li><a href="#">MPCB Zone Master</a></li>
+                          <li><a href="#">Vehicle Details</a></li>
+                          <li><a href="#">Regional Master</a></li>
+                          <li><a href="#">Division Master</a></li>
+                          <li><a href="#">Route Details</a></li>
+                          <li><a href="#">Daily Route Details</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list factory-master">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Segregation Master</a></li>
+                          <li><a href="#">Consumption Master</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list mbhm-collection-2">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Taluka Master</a></li>
+                          <li><a href="#">Distric Master</a></li>
+                          <li><a href="#">Type Master</a></li>
+                          <li><a href="#">City Master</a></li>
+                          <li><a href="#">Dr. Association</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list factory-transaction">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Incineration Activity</a></li>
+                          <li><a href="#">Incineration Log Sheets</a></li>
+                          <li><a href="#">Log Book for Autoclave</a></li>
+                          <li><a href="#">ETP Work Sheet</a></li>
+                          <li><a href="#">Shredder Report</a></li>
+                          <li><a href="#">Consumption</a></li>
+                          <li><a href="#">Segregation</a></li>
+                          <li><a href="#">Chemical Treatment Report</a></li>
+                          <li><a href="#">Employee Attendance</a></li>
+                          <li><a href="#">Presenty Remark</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list communication">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Task Management</a></li>
+                          <li><a href="#">BMW Registration</a></li>
+                          <li><a href="#">Bed Entry</a></li>
+                          <li><a href="#">Purchase Order</a></li>
+                          <li><a href="#">Bags Purchase</a></li>
+                          <li>
+                            <a href="#">Delivery Challan Book Register</a>
+                          </li>
+                          <li><a href="#">Delivery Challan</a></li>
+                          <li><a href="#">Issue to Driver</a></li>
 
-                      <li class="uk-active">
-                        <a href="#">Letter Print</a>
-                      </li>
-                      <li><a href="#">Agreement</a></li>
-                    </ul>
+                          <li><a href="#">Receipt Book Issue Register</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list factory-transaction-summary">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Shredder Summary Report</a></li>
+                          <li>
+                            <a href="#">Chemical Treatment Summary Report</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="report-list letter-print">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Agreement</a></li>
+                          <li><a href="#">BMW Bag Quotation</a></li>
+                          <li>
+                            <a href="#">Quatation Renewal of Agreement</a>
+                          </li>
+                          <li><a href="#">BMW Quatation</a></li>
+                          <li><a href="#">Discontinue Service</a></li>
+                          <li>
+                            <a href="#">Payment And Service Discontinue</a>
+                          </li>
+                          <li><a href="#">Satisfactor Letter</a></li>
+                          <li><a href="#">Service Discontinue</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list company-master">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Company Details</a></li>
+                          <li><a href="#">Employee Details</a></li>
+                          <li><a href="#">Supplier Details</a></li>
+                          <li><a href="#">Work Nature Master</a></li>
+                          <li><a href="#">Attendance Process Master</a></li>
+                          <li><a href="#">Item Master</a></li>
+                          <li><a href="#">Category Master</a></li>
+                          <li><a href="#">Designation Master</a></li>
+                        </ul>
+                      </div>
+                      <div class="report-list mbhm-collection-master-2">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Taluka Master</a></li>
+                          <li><a href="#">Distric Master</a></li>
+                          <li><a href="#">Type Master</a></li>
+                          <li><a href="#">City Master</a></li>
+                          <li><a href="#">Dr. Association</a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <!-- <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="uk-active">
-                        <a href="#">MBHM Collection Master</a>
-                      </li>
-                      <li><a href="#">HCU Type</a></li>
-                      <li><a href="#">Bag Details</a></li>
-                      <li><a href="#">MHBM Zone master</a></li>
-                      <li><a href="#">MPCB Zone Master</a></li>
-                      <li><a href="#">Vehicle Details</a></li>
-                      <li><a href="#">Regional Master</a></li>
-                      <li><a href="#">Division Master</a></li>
-                      <li><a href="#">Route Details</a></li>
-                      <li><a href="#">Daily Route Details</a></li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </li>
@@ -143,5 +186,6 @@
 
       <div class="uk-navbar-dropbar"></div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
