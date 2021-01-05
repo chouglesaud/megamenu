@@ -1,14 +1,14 @@
-::-webkit-scrollbar {
+.navbar .megamenu ::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.navbar .megamenu ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.navbar .megamenu ::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 10px;
 }
