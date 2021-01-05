@@ -1,3 +1,6 @@
+.row {
+  margin: 0px !important;
+}
 .navbar {
   padding: 10px !important;
   width: 100%;
@@ -24,6 +27,7 @@
 .drop-down-container {
   width: 100% !important;
   padding: 0px !important;
+  margin: 0px;
 }
 
 .drop-down-container,
