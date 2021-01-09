@@ -31,11 +31,15 @@
   justify-content: center;
   padding: 20px;
 }
+.form-section {
+  padding: 20px !important;
+}
 .form-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 20px;
+  margin: 0px;
 }
 
 .form-group {

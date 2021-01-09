@@ -202,23 +202,193 @@ const form = {
     </form>
   </div>
 </div>`,
+  'shredder-summary-report': `
+<form class="form-row">
+<div class="col-lg-5 col-md-8 col-sm-10 form-section">
+  <div class="form-group">
+    <label for="material">Material</label>
+    <select class="custom-select form-control" id="material">
+      <option selected>Select Material</option>
+      <option value="AMPOOLS">AMPOOLS</option>
+      <option value="INJECTION">INJECTION</option>
+      <option value="MIX-COVER">MIX COVER</option>
+      <option value="SALAINE-CAP">SALAINE CAP</option>
+      <option value="WASTE">WASTE</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="total-batch-no">Total Batch no</label>
+    <input
+      type="text"
+      class="form-control"
+      id="total-batch-no"
+    />
+  </div>
+  <div class="form-group">
+    <label for="total-bag">Total Bag</label>
+    <input type="text" class="form-control" id="total-bag" />
+  </div>
+  <div class="form-group">
+    <label for="total-kg">Total KG</label>
+    <input type="text" class="form-control" id="total-kg" />
+  </div>
+  <div class="form-group">
+    <label for="quantity-per-hr-kg"
+      >Quantity Per HR. KG</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="quantity-per-hr-kg"
+    />
+  </div>
+  <div class="form-group" style="justify-content: flex-end">
+    <button class="btn btn-primary btn-sm" id="addGrid">ADD</button>
+  </div>
+</div>
+<div class="col-lg-5 col-md-8 col-sm-10 form-section">
+  <div class="form-group" style="justify-content: flex-start">
+    <p><b>Common Element</b></p>
+  </div>
+  <div class="form-group">
+    <label for="date-of-birth">Date</label>
+    <input
+      type="date"
+      class="form-control"
+      id="date-of-birth"
+    />
+  </div>
+  <div class="form-group">
+    <label for="start-reading">Start Reading</label>
+    <input
+      type="text"
+      class="form-control"
+      id="start-reading"
+    />
+  </div>
+  <div class="form-group">
+    <label for="close-reading">Close Reading</label>
+    <input
+      type="text"
+      class="form-control"
+      id="close-reading"
+    />
+  </div>
+  <div class="form-group">
+    <label for="electricity-consumption"
+      >Electricity Consumption</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="electricity-consumption"
+    />
+  </div>
+  <div class="form-group" style="justify-content: flex-end">
+    <button class="btn btn-primary btn-sm">UPDATE</button>
+  </div>
+</div>
+</form>`,
 };
 const allSubmenuLinks = document.querySelectorAll('.sub-menu a[data-id]');
+
+let addGridBtn;
+
+document.addEventListener('gridLoaded', () => {
+  const material = document.querySelector('#material');
+  const totalBatchNo = document.querySelector('#total-batch-no');
+  const totalBag = document.querySelector('#total-bag');
+  const totalKg = document.querySelector('#total-kg');
+  const quantityPerHrKg = document.querySelector('#quantity-per-hr-kg');
+  addGridBtn = document.querySelector('#addGrid');
+  addGridBtn.addEventListener('click', (e) => {
+    // console.log(material, totalBatchNo, totalBag, totalKg, quantityPerHrKg);
+    alert('hi');
+  });
+});
+class Table {
+  constructor(id, heads, rows) {
+    this.id = id;
+    this.heads = heads;
+    this.rows = rows;
+  }
+  render() {
+    document.dispatchEvent(new Event('gridLoaded'));
+    return `<div class="col-12"><table class="table table-hover table-sm" id="${
+      this.id
+    }">
+          <thead>
+            ${this._addHeads()}
+          </thead>
+          <tbody id="tableBody">
+            ${this._addRows()}
+          </tbody>
+        </table>
+      </div>`;
+  }
+  _addHeads() {
+    let tableHeads = '';
+    this.heads.forEach((head) => {
+      tableHeads += `<th scope="col">${head}</th>`;
+    });
+    return `<tr>${tableHeads}</tr>`;
+  }
+  _addRows() {
+    let tableRows = '';
+    const append = true;
+    this.rows.forEach((row, index) => {
+      tableRows += this.addRow(row, index, append);
+    });
+    return tableRows;
+  }
+  addRow(values, index, append) {
+    let tableData = '';
+    values.forEach((data) => {
+      tableData +=
+        index < 1 ? `<td scope="row">${data}</td>` : `<td>${data}</td>`;
+    });
+    if (append) {
+      return `<tr>${tableData} </tr>`;
+    }
+    document.querySelector('#tableBody').innerHTML += tableData;
+  }
+}
+
+const tableHeads = [
+  'Material',
+  'Total Batch No',
+  'Total Bag',
+  'Total KG',
+  'Quantity Per HR.kg',
+];
+const tableRows = [
+  ['AMPOOLS', '12', '2', '120', '50'],
+  ['INJECTION', '13', '3', '121', '51'],
+  ['MIX COVER', '14', '4', '122', '52'],
+  ['SALAINE CAP', '15', '5', '123', '53'],
+  ['WASTE', '16', '5', '124', '54'],
+];
+
+const table = new Table('table01', tableHeads, tableRows);
 
 allSubmenuLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const name = e.target.getAttribute('data-name');
     const id = e.target.getAttribute('data-id');
-    loadFormBy(name, id);
+    const type = e.target.getAttribute('data-form-type');
+    loadFormBy(name, id, type);
   });
 });
 
-function loadFormBy(name, id) {
+function loadFormBy(name, id, type) {
   const appId = '#app';
   const app = document.querySelector(appId);
   app.innerHTML = renderTopBarWith(name);
   app.innerHTML += form[id];
+  if (type === 'grid') {
+    app.innerHTML += table.render();
+  }
 }
 function renderTopBarWith(name) {
   return `<div class="top-bar">
