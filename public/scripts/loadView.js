@@ -256,16 +256,12 @@ const form = {
   <label for="start-time"
     >Start Time</label
   >
-  <input
-    type="time"
-    class="form-control"
-    id="start-time"
-  />
+  <input class="form-check-input" class="" type="checkbox" value="" id="defaultCheck1">
 </div>
  
 </div>
 <div class="col-lg-9 col-md-9 col-sm-12 form-section grid" style="padding: 0px 10px;">
-<div class="col-12"  style="display: flex;justify-content: flex-end;padding: 5px 20px;"><button data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn btn-success btn-sm">Add New</button></div>
+<div class="col-12"  style="display: flex;justify-content: flex-end;padding: 5px 20px;"><button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn btn-success btn-sm">Add New</button></div>
    
    <div
    class="modal fade bd-example-modal-lg"
