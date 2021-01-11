@@ -106,3 +106,20 @@
 .form-group {
   margin-bottom: 0.5rem;
 }
+.action-btn-container {
+  margin-right: 5px;
+}
+.action-btn-container button span {
+  padding: 0px 2px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.action-btn-container button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center !important;
+}

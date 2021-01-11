@@ -1,74 +1,82 @@
 const form = {
-  'company-details': `
-<div class="row row-container">
-  <div class="col-lg-6 col-md-6 col-sm-12 form-row-container" id="app">
-    <form class="my-form">
-      <div class="form-group">
-        <label for="company-name">Company Name</label>
-        <input type="text" class="form-control" id="company-name" />
+  'company-details': {
+    'report-page': `
+    <div class="col-lg-12 col-md-12 col-sm-12 form-section grid" style="padding: 0px 10px;">
+    </div>
+    `,
+    'form-page': `
+    <div class="row row-container">
+      <div class="col-lg-6 col-md-6 col-sm-12 form-row-container" id="app">
+        <form class="my-form">
+          <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input type="text" class="form-control" id="company-name" />
+          </div>
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="text" class="form-control" id="website" />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="address"
+              cols="30"
+              rows="2"
+            ></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="telphone-no">Telephone no</label>
+            <input type="text" class="form-control" id="telphone-no" />
+          </div>
+          <div class="form-group">
+            <label for="manager-no">Manager no</label>
+            <input type="text" class="form-control" id="manager-no" />
+          </div>
+          <div class="form-group">
+            <label for="office-no">Office no</label>
+            <input type="text" class="form-control" id="office-no" />
+          </div>
+          <div class="form-group">
+            <label for="mpcd-consent-no">MPCD Consent no</label>
+            <input type="text" class="form-control" id="mpcd-consent-no" />
+          </div>
+          <div class="form-group">
+            <label for="email-1">Email 1</label>
+            <input type="text" class="form-control" id="email-1" />
+          </div>
+          <div class="form-group">
+            <label for="email-2">Email 2</label>
+            <input type="text" class="form-control" id="email-2" />
+          </div>
+          <div class="form-group">
+            <label for="email-2">Email 2</label>
+            <input type="text" class="form-control" id="email-2" />
+          </div>
+          <p><b>Stock Effective</b></p>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date" />
+          </div>
+          <div class="form-group">
+            <label for="sms-api">SMS API</label>
+            <textarea
+              class="form-control"
+              name="sms-api"
+              id="sms-api"
+              cols="30"
+              rows="2"
+            ></textarea>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="website">Website</label>
-        <input type="text" class="form-control" id="website" />
-      </div>
-      <div class="form-group">
-        <label for="address">Address</label>
-        <textarea
-          type="text"
-          class="form-control"
-          id="address"
-          cols="30"
-          rows="2"
-        ></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="telphone-no">Telephone no</label>
-        <input type="text" class="form-control" id="telphone-no" />
-      </div>
-      <div class="form-group">
-        <label for="manager-no">Manager no</label>
-        <input type="text" class="form-control" id="manager-no" />
-      </div>
-      <div class="form-group">
-        <label for="office-no">Office no</label>
-        <input type="text" class="form-control" id="office-no" />
-      </div>
-      <div class="form-group">
-        <label for="mpcd-consent-no">MPCD Consent no</label>
-        <input type="text" class="form-control" id="mpcd-consent-no" />
-      </div>
-      <div class="form-group">
-        <label for="email-1">Email 1</label>
-        <input type="text" class="form-control" id="email-1" />
-      </div>
-      <div class="form-group">
-        <label for="email-2">Email 2</label>
-        <input type="text" class="form-control" id="email-2" />
-      </div>
-      <div class="form-group">
-        <label for="email-2">Email 2</label>
-        <input type="text" class="form-control" id="email-2" />
-      </div>
-      <p><b>Stock Effective</b></p>
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="date" />
-      </div>
-      <div class="form-group">
-        <label for="sms-api">SMS API</label>
-        <textarea
-          class="form-control"
-          name="sms-api"
-          id="sms-api"
-          cols="30"
-          rows="2"
-        ></textarea>
-      </div>
-    </form>
-  </div>
-</div>`,
-  'employee-details': ` <div class="row row-container">
+    </div>`,
+  },
+  'employee-details': {
+    'report-page': ``,
+    'form-page': ` <div class="row row-container">
   <div
     class="col-lg-12 col-md-12 col-sm-12 form-row-container"
     id="app"
@@ -202,12 +210,19 @@ const form = {
     </form>
   </div>
 </div>`,
-  'shredder-summary-report': `
- 
-<form class="form-row ">
-
-<div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container">
+  },
+  'shredder-summary-report': {
+    'report-page': '',
+    'form-page': `
+<form class="form-row">
+<div class="col-lg-9 col-md-9 col-sm-12 form-section grid" style="padding: 0px 10px;">
+<div class="col-12"  style="display: flex;justify-content: flex-end;padding: 5px 20px;">
+  <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn btn-success btn-sm">ADD NEW ENTRY</button>
+ </div>
   
+</div>
+<div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container">
+  <p><b>Summary Report</b></p>
   <div class="form-group grid-form-group">
     <label for="date-of-birth">Date</label>
     <input
@@ -256,101 +271,17 @@ const form = {
   <label for="start-time"
     >Start Time</label
   >
-  <input class="form-check-input" class="" type="checkbox" value="" id="defaultCheck1">
+  <input
+    type="time"
+    class="form-control"
+    id="start-time"
+  />
 </div>
- 
+ ${renderModal()}
 </div>
-<div class="col-lg-9 col-md-9 col-sm-12 form-section grid" style="padding: 0px 10px;">
-<div class="col-12"  style="display: flex;justify-content: flex-end;padding: 5px 20px;"><button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn btn-success btn-sm">Add New</button></div>
-   
-   <div
-   class="modal fade bd-example-modal-lg"
-   id="exampleModal"
-   tabindex="-1"
-   role="dialog"
-   aria-labelledby="exampleModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-lg" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Add New</h5>
-         <button
-           type="button"
-           class="close"
-           data-dismiss="modal"
-           aria-label="Close"
-         >
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         <form class="form">
-           <div class="col-8 form-section">
-             <div class="form-group">
-               <label for="material">Material</label>
-               <select
-                 class="custom-select form-control"
-                 id="material"
-               >
-                 <option selected>Select Material</option>
-                 <option value="AMPOOLS">AMPOOLS</option>
-                 <option value="INJECTION">INJECTION</option>
-                 <option value="MIX-COVER">MIX COVER</option>
-                 <option value="SALAINE-CAP">SALAINE CAP</option>
-                 <option value="WASTE">WASTE</option>
-               </select>
-             </div>
-             <div class="form-group">
-               <label for="total-batch-no">Total Batch no</label>
-               <input
-                 type="text"
-                 class="form-control"
-                 id="total-batch-no"
-               />
-             </div>
-             <div class="form-group">
-               <label for="total-bag">Total Bag</label>
-               <input
-                 type="text"
-                 class="form-control"
-                 id="total-bag"
-               />
-             </div>
-             <div class="form-group">
-               <label for="total-kg">Total KG</label>
-               <input
-                 type="text"
-                 class="form-control"
-                 id="total-kg"
-               />
-             </div>
-             <div class="form-group">
-               <label for="quantity-per-hr-kg"
-                 >Quantity Per HR. KG</label
-               >
-               <input
-                 type="text"
-                 class="form-control"
-                 id="quantity-per-hr-kg"
-               />
-             </div>
-             <div
-               class="form-group"
-               style="justify-content: flex-end"
-             ></div>
-           </div>
-         </form>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-primary btn-sm">
-           ADD
-         </button>
-       </div>
-   </div>
- </div>
-</div>
+
 </form>`,
+  },
 };
 const allSubmenuLinks = document.querySelectorAll('.sub-menu a[data-id]');
 
@@ -372,12 +303,12 @@ class Table {
   }
   render() {
     document.dispatchEvent(new Event('gridLoaded'));
-    const table = `<div class="col-12"><table class="table table-hover table-sm" id="${
+    const table = `<div class="col-12 table-responsive"><table class="table table-hover table-sm" id="${
       this.id
     }">
           <thead>
-            <th> </th>
-            <th> </th>
+            <th>Edit </th>
+            <th>Delete </th>
             ${this._addHeads()}
           </thead>
           <tbody id="tableBody">
@@ -470,31 +401,93 @@ const tableRows = [
     '54',
   ],
 ];
+const reportTableHeads = [
+  'ID',
+  'VISIBLE HCF & UID BUTTONS ON REGISTRATION',
+  'SMS API',
+  'STOCK EFFECTIVE',
+  'EMAIL ID 1',
+  'EMAIL ID 2',
+  'EMAIL ID 3',
+  'MPCB CONSENT NO',
+  'COMPANY NAME',
+  'OFFICE NO',
+  'TELEPHONE NO',
+  'ADDRESS',
+  'WEBSITE',
+  'MANAGER NO',
+];
+const reportTableRows = [
+  [
+    '<i class="bi bi-pencil-square"></i>',
+    '<i class="bi bi-trash-fill"></i>',
+    '1',
+    'No',
+    'sms api',
+    '22-12-2020',
+    'company1@gmail.com',
+    'company2@gmail.com',
+    'company3@gmail.com',
+    '50',
+    'Company One',
+    '11111',
+    '+91-1232-123-1212',
+    'Gowalkoat road Chiplun',
+    'companyone.com',
+    'manager01',
+  ],
+  [
+    '<i class="bi bi-pencil-square"></i>',
+    '<i class="bi bi-trash-fill"></i>',
+    '1',
+    'No',
+    'sms api',
+    '22-12-2020',
+    'company11@gmail.com',
+    'company12@gmail.com',
+    'company13@gmail.com',
+    '52',
+    'Company two',
+    '11112',
+    '+91-13232-123-1212',
+    'Chiplun',
+    'companytwo.com',
+    'manager02',
+  ],
+];
 
 const table = new Table('table01', tableHeads, tableRows);
-
+const reportTable = new Table('reportTable', reportTableHeads, reportTableRows);
 allSubmenuLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const name = e.target.getAttribute('data-name');
     const id = e.target.getAttribute('data-id');
     const type = e.target.getAttribute('data-form-type');
-    loadFormBy(name, id, type);
+    loadReportPageBy(name, id);
   });
 });
 
-function loadFormBy(name, id, type) {
+function loadFormPageBy(name, id, type) {
   const appId = '#app';
   const app = document.querySelector(appId);
 
   if (type === 'grid') {
     app.innerHTML = renderTopBarWith(name, 'SAVE');
-    app.innerHTML += form[id];
+    app.innerHTML += form[id]['form-page'];
     table.render();
   } else {
     app.innerHTML = renderTopBarWith(name, 'ADD');
-    app.innerHTML += form[id];
+    app.innerHTML += form[id]['form-page'];
   }
+}
+function loadReportPageBy(name, id) {
+  const appId = '#app';
+  const app = document.querySelector(appId);
+  app.innerHTML = renderTopBarWith(name, 'ADD NEW');
+  app.innerHTML += form[id]['report-page'];
+  renderReportPageActionBar();
+  reportTable.render();
 }
 function renderTopBarWith(name, btnName) {
   return `<div class="top-bar row">
@@ -510,4 +503,144 @@ function renderTopBarWith(name, btnName) {
     </div>
   </div>
 </div>`;
+}
+function renderModal() {
+  return ` <div
+  class="modal fade bd-example-modal-lg"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  >
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form">
+          <div class="col-8 form-section">
+            <div class="form-group">
+              <label for="material">Material</label>
+              <select
+                class="custom-select form-control"
+                id="material"
+              >
+                <option selected>Select Material</option>
+                <option value="AMPOOLS">AMPOOLS</option>
+                <option value="INJECTION">INJECTION</option>
+                <option value="MIX-COVER">MIX COVER</option>
+                <option value="SALAINE-CAP">SALAINE CAP</option>
+                <option value="WASTE">WASTE</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="total-batch-no">Total Batch no</label>
+              <input
+                type="text"
+                class="form-control"
+                id="total-batch-no"
+              />
+            </div>
+            <div class="form-group">
+              <label for="total-bag">Total Bag</label>
+              <input
+                type="text"
+                class="form-control"
+                id="total-bag"
+              />
+            </div>
+            <div class="form-group">
+              <label for="total-kg">Total KG</label>
+              <input
+                type="text"
+                class="form-control"
+                id="total-kg"
+              />
+            </div>
+            <div class="form-group">
+              <label for="quantity-per-hr-kg"
+                >Quantity Per HR. KG</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="quantity-per-hr-kg"
+              />
+            </div>
+            <div
+              class="form-group"
+              style="justify-content: flex-end"
+            ></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm">
+          ADD
+        </button>
+      </div>
+  </div>
+</div>`;
+}
+function renderReportPageActionBar() {
+  document.querySelector('.grid').innerHTML += `
+  <div class="col-12"  style="display: flex;justify-content: flex-start;padding: 5px 20px;">
+    <div class="action-btn-container">
+      <button type="button" class="btn btn-sm btn-success" type="button" ><span class="bi bi-funnel-fill"></span> <span>Filter</span></button>
+    </div>
+    <div class="action-btn-container">
+      <button type="button" class="btn btn-success btn-sm">
+      <span class="bi bi-plus-square-fill"></span><span>Add Column</span>
+      </button>
+    </div>
+    <div class="action-btn-container">
+      <button type="button" class="btn btn-success btn-sm">
+      <span class="bi bi-printer-fill"></span> <span>Print</span>
+      </button>
+    </div>
+    <div class="action-btn-container">
+      <button type="button" class="btn btn-success btn-sm">
+      <span class="bi bi-table"></span> <span>Export Excel</span>
+      </button>
+    </div>
+    <div class="action-btn-container">
+      <button type="button" class="btn btn-success btn-sm">
+      <span class="bi bi-printer-fill"></span> <span>Search & Print</span>
+      </button>
+    </div>
+  
+ </div>
+ `;
+}
+
+function renderFilterDrawer() {
+  return `
+  <div class="bmd-layout-container bmd-drawer-f-l">
+   <div id="dw-s1" class="bmd-layout-drawer bg-faded">
+    <header>
+      <a class="navbar-brand">Title</a>
+    </header>
+    <ul class="list-group">
+      <a class="list-group-item">Link 1</a>
+      <a class="list-group-item">Link 2</a>
+      <a class="list-group-item">Link 3</a>
+    </ul>
+    </div>
+   <main class="bmd-layout-content">
+    <div class="container">
+      <p>Main content</p>
+    </div>
+   </main>
+</div>
+  `;
 }

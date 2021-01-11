@@ -5,36 +5,46 @@ class Table {
     this.rows = rows;
   }
   render() {
-    return `<div class="col-12">
-        <table class="table table-hover table-sm" id="${id}">
+    document.dispatchEvent(new Event('gridLoaded'));
+    const table = `<div class="col-12"><table class="table table-hover table-sm" id="${
+      this.id
+    }">
           <thead>
+            <th> </th>
+            <th> </th>
             ${this._addHeads()}
           </thead>
-          <tbody>
+          <tbody id="tableBody">
             ${this._addRows()}
           </tbody>
         </table>
       </div>`;
+    document.querySelector('.grid').innerHTML += table;
   }
   _addHeads() {
     let tableHeads = '';
     this.heads.forEach((head) => {
-      tableHeads += `<th scop="col">${head}</th>`;
+      tableHeads += `<th scope="col">${head}</th>`;
     });
-    return `<tr>${tableHeads}</tr>`;
+    return `${tableHeads}`;
   }
-  addRows() {
+  _addRows() {
     let tableRows = '';
-    this.rows.forEach((row) => {
-      tableRows += '<tr>';
-      row.forEach((data, index) => {
-        if (index < 1) {
-          tableRows += `<td scope="row">${data}</td>`;
-        } else {
-          tableRows += `<td>${data}</td>`;
-        }
-      });
-      tableRows += '</tr>';
+    const append = true;
+    this.rows.forEach((row, index) => {
+      tableRows += this.addRow(row, index, append);
     });
+    return tableRows;
+  }
+  addRow(values, index, append) {
+    let tableData = '';
+    values.forEach((data) => {
+      tableData +=
+        index < 1 ? `<td scope="row">${data}</td>` : `<td>${data}</td>`;
+    });
+    if (append) {
+      return `<tr>${tableData} </tr>`;
+    }
+    document.querySelector('#tableBody').innerHTML += tableData;
   }
 }
