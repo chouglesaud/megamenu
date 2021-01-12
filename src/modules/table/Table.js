@@ -6,19 +6,19 @@ class Table {
   }
   render() {
     document.dispatchEvent(new Event('gridLoaded'));
-    const table = `<div class="col-12"><table class="table table-hover table-sm" id="${
+    const table = `<div class="col-12 table-responsive"><table class="table table-hover table-sm" id="${
       this.id
     }">
-          <thead>
-            <th> </th>
-            <th> </th>
-            ${this._addHeads()}
-          </thead>
-          <tbody id="tableBody">
-            ${this._addRows()}
-          </tbody>
-        </table>
-      </div>`;
+            <thead>
+              <th>Edit </th>
+              <th>Delete </th>
+              ${this._addHeads()}
+            </thead>
+            <tbody id="tableBody">
+              ${this._addRows()}
+            </tbody>
+          </table>
+        </div>`;
     document.querySelector('.grid').innerHTML += table;
   }
   _addHeads() {
@@ -48,3 +48,5 @@ class Table {
     document.querySelector('#tableBody').innerHTML += tableData;
   }
 }
+
+export default Table;
