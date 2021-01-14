@@ -1,4 +1,15 @@
 .btn,
 select {
   min-width: 70px;
+  font-size: 0.875rem;
+  font-weight: 400 !important;
+}
+table tr:hover {
+  background-color: #f7f8fa !important;
+}
+.sec-action {
+  border: 1px solid var(--border-color) !important;
+}
+.icon {
+  color: var(--icon-color);
 }

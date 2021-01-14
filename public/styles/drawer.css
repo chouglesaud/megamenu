@@ -1,0 +1,23 @@
+.drawer {
+  display: none;
+  min-width: 20%;
+  height: 85vh;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-top: none;
+}
+.drawer .drawer-container {
+  padding: 10px !important;
+  width: 100%;
+}
+.filter-header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.close-btn-container {
+  padding: 5px 0px;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -19,7 +19,7 @@ class Table {
             </tbody>
           </table>
         </div>`;
-    document.querySelector('.grid').innerHTML += table;
+    document.querySelector('.main-section').innerHTML += table;
   }
   _addHeads() {
     let tableHeads = '';

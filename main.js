@@ -6,6 +6,11 @@ import {
 } from './src/modules/templates/index.js';
 
 import { table, reportTable } from './src/modules/table/index.js';
+import {
+  openDrawer,
+  closeDrawer,
+  renderDrawer,
+} from './src/modules/drawer/drawer.js';
 
 const allSubmenuLinks = document.querySelectorAll('.sub-menu a[data-id]');
 
@@ -15,7 +20,8 @@ allSubmenuLinks.forEach((link) => {
     const name = e.target.getAttribute('data-name');
     const id = e.target.getAttribute('data-id');
     const type = e.target.getAttribute('data-form-type');
-    loadFormPageBy(name, id, type);
+    // loadFormPageBy(name, id, type);
+    loadReportPageBy(name, id);
   });
 });
 
@@ -40,4 +46,11 @@ function loadReportPageBy(name, id) {
   app.innerHTML += form[id]['report-page'];
   renderReportPageActionBar();
   reportTable.render();
+  renderDrawer();
+  document.querySelector('.filter').addEventListener('click', () => {
+    openDrawer();
+  });
+  document.querySelector('.closebtn').addEventListener('click', () => {
+    closeDrawer();
+  });
 }

@@ -1,10 +1,16 @@
 table {
   white-space: nowrap !important;
+  border-radius: 4px;
+  border: 0.5px solid var(--table-border) !important;
 }
 thead th {
   font-weight: normal;
+  background-color: #f7f8fa;
+  border-bottom: 0px !important;
 }
+
 .table-sm td,
 .table-sm th {
   padding: 0.3rem 1rem !important;
+  border-right: 0.5px solid var(--table-border);
 }

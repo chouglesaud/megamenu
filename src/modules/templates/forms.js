@@ -1,7 +1,9 @@
 const form = {
   'company-details': {
     'report-page': `
-      <div class="col-lg-12 col-md-12 col-sm-12 form-section grid" style="padding: 0px 10px;">
+      <div class="col-lg-12 col-md-12 col-sm-12 form-section grid">
+      <div class="drawer"></div>
+      <div class="main-section" style="padding: 0px 10px"></div>
       </div>
       `,
     'form-page': `
@@ -221,7 +223,7 @@ const form = {
    </div>
     
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container">
+  <div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container" style="border-left: 1px solid var(--border-color)">
     <p><b>Summary Report</b></p>
     <div class="form-group grid-form-group">
       <label for="date-of-birth">Date</label>

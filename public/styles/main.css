@@ -155,3 +155,15 @@
     display: inline-block !important;
   }
 }
+.grid {
+  display: flex;
+  flex-direction: row;
+  padding: 0px !important;
+}
+.main-section {
+  width: 100%;
+  padding: 10px !important;
+}
+.filter-container input[type='checkbox'] {
+  display: none;
+}
