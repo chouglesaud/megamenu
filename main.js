@@ -20,8 +20,8 @@ allSubmenuLinks.forEach((link) => {
     const name = e.target.getAttribute('data-name');
     const id = e.target.getAttribute('data-id');
     const type = e.target.getAttribute('data-form-type');
-    loadFormPageBy(name, id, type);
-    // loadReportPageBy(name, id);
+    // loadFormPageBy(name, id, type);
+    loadReportPageBy(name, id);
   });
 });
 
@@ -59,3 +59,12 @@ function loadPrintPageBy(name, id) {
   const app = document.querySelector(appId);
   app.innerHTML = renderTopBarWith(name, 'ADD NEW');
 }
+/**
+ * works for static html
+ */
+document.querySelector('.filter').addEventListener('click', () => {
+  openDrawer();
+});
+document.querySelector('.closebtn').addEventListener('click', () => {
+  closeDrawer();
+});
