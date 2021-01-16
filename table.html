@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table View</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/public/styles/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="app">
+        <div class="col-lg-12 col-md-12 col-sm-12 form-section grid">
+          <div class="drawer">
+            <div class="drawer-container">
+              <div class="filter-header-container">
+                <div class="filter-header">
+                  <h3>Filter By</h3>
+                </div>
+                <div class="close-btn-container">
+                  <button
+                    type="button"
+                    class="closebtn btn btn-light btn-sm sec-action"
+                  >
+                    close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-section" style="padding: 0px 10px">
+            <div
+              class="col-12"
+              style="
+                display: flex;
+                justify-content: flex-start;
+                padding: 5px 15px;
+              "
+            >
+              <div class="action-btn-container filter-container">
+                <input
+                  id="filter"
+                  type="checkbox"
+                  class="filter btn btn-light btn-sm sec-action"
+                />
+                <label for="filter" class="btn btn-light btn-sm sec-action"
+                  ><span class="bi bi-funnel-fill icon"></span>
+                  <span>Filter</span><label> </label
+                ></label>
+              </div>
+              <div class="action-btn-container">
+                <button type="button" class="btn btn-light btn-sm sec-action">
+                  <span class="bi bi-plus-square-fill icon"></span
+                  ><span>Add Column</span>
+                </button>
+              </div>
+              <div class="action-btn-container">
+                <button type="button" class="btn btn-light btn-sm sec-action">
+                  <span class="bi bi-printer-fill icon"></span>
+                  <span>Print</span>
+                </button>
+              </div>
+              <div class="action-btn-container">
+                <button type="button" class="btn btn-light btn-sm sec-action">
+                  <span class="bi bi-table icon"></span>
+                  <span>Export Excel</span>
+                </button>
+              </div>
+              <div class="action-btn-container">
+                <button type="button" class="btn btn-light btn-sm sec-action">
+                  <span class="bi bi-printer-fill icon"></span>
+                  <span>Search &amp; Print</span>
+                </button>
+              </div>
+              <div class="action-btn-container">
+                <select
+                  class="btn btn-light btn-sm sec-action sec-action-select"
+                >
+                  <option value="mass-select">Select</option>
+                  <option value="mass-edit">Mass Edit</option>
+                  <option value="mass-delete">Mass Delete</option>
+                </select>
+              </div>
+              <div class="action-btn-container">
+                <select
+                  class="btn btn-light btn-sm sec-action sec-action-select"
+                >
+                  <option value="sort">Sort By</option>
+                  <option value="id">id</option>
+                  <option value="email1">Email 1</option>
+                  <option value="email2">Email 2</option>
+                  <option value="email3">Email 3</option>
+                  <option value="email3">
+                    VISIBLE HCF &amp; UID BUTTONS ON REGISTRATION
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 table-responsive">
+              <table class="table table-hover table-sm" id="reportTable">
+                <thead>
+                  <tr>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">
+                      VISIBLE HCF &amp; UID BUTTONS ON REGISTRATION
+                    </th>
+                    <th scope="col">SMS API</th>
+                    <th scope="col">STOCK EFFECTIVE</th>
+                    <th scope="col">EMAIL ID 1</th>
+                    <th scope="col">EMAIL ID 2</th>
+                    <th scope="col">EMAIL ID 3</th>
+                    <th scope="col">MPCB CONSENT NO</th>
+                    <th scope="col">COMPANY NAME</th>
+                    <th scope="col">OFFICE NO</th>
+                    <th scope="col">TELEPHONE NO</th>
+                    <th scope="col">ADDRESS</th>
+                    <th scope="col">WEBSITE</th>
+                    <th scope="col">MANAGER NO</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <tr>
+                    <td scope="row">
+                      <i class="bi bi-pencil-square icon"></i>
+                    </td>
+                    <td scope="row"><i class="bi bi-trash-fill icon"></i></td>
+                    <td scope="row">1</td>
+                    <td scope="row">No</td>
+                    <td scope="row">sms api</td>
+                    <td scope="row">22-12-2020</td>
+                    <td scope="row">company1@gmail.com</td>
+                    <td scope="row">company2@gmail.com</td>
+                    <td scope="row">company3@gmail.com</td>
+                    <td scope="row">50</td>
+                    <td scope="row">Company One</td>
+                    <td scope="row">11111</td>
+                    <td scope="row">+91-1232-123-1212</td>
+                    <td scope="row">Gowalkoat road Chiplun</td>
+                    <td scope="row">companyone.com</td>
+                    <td scope="row">manager01</td>
+                  </tr>
+                  <tr>
+                    <td><i class="bi bi-pencil-square icon"></i></td>
+                    <td><i class="bi bi-trash-fill icon"></i></td>
+                    <td>1</td>
+                    <td>No</td>
+                    <td>sms api</td>
+                    <td>22-12-2020</td>
+                    <td>company11@gmail.com</td>
+                    <td>company12@gmail.com</td>
+                    <td>company13@gmail.com</td>
+                    <td>52</td>
+                    <td>Company two</td>
+                    <td>11112</td>
+                    <td>+91-13232-123-1212</td>
+                    <td>Chiplun</td>
+                    <td>companytwo.com</td>
+                    <td>manager02</td>
+                  </tr>
+                  <tr>
+                    <td><i class="bi bi-pencil-square icon"></i></td>
+                    <td><i class="bi bi-trash-fill icon"></i></td>
+                    <td>2</td>
+                    <td>No</td>
+                    <td>sms api 232</td>
+                    <td>22-12-2021</td>
+                    <td>company13@gmail.com</td>
+                    <td>company13@gmail.com</td>
+                    <td>company13@gmail.com</td>
+                    <td>123</td>
+                    <td>Company three</td>
+                    <td>1223232</td>
+                    <td>+91-13232-123-3</td>
+                    <td>Khed</td>
+                    <td>companythree.com</td>
+                    <td>manager03</td>
+                  </tr>
+                  <tr>
+                    <td><i class="bi bi-pencil-square icon"></i></td>
+                    <td><i class="bi bi-trash-fill icon"></i></td>
+                    <td>4</td>
+                    <td>Yes</td>
+                    <td>sms api 2sf32</td>
+                    <td>22-13-2021</td>
+                    <td>company14@gmail.com</td>
+                    <td>company14@gmail.com</td>
+                    <td>company14@gmail.com</td>
+                    <td>1234</td>
+                    <td>Company four</td>
+                    <td>77777777</td>
+                    <td>+91-13232-123-3444</td>
+                    <td>Guhagar</td>
+                    <td>companyfour.com</td>
+                    <td>manager04</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- javascript link file name  -->
+    <script src="/public/scripts/megamenu.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

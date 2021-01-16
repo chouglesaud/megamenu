@@ -75,6 +75,7 @@ const form = {
           </form>
         </div>
       </div>`,
+    'print-page': '',
   },
   'employee-details': {
     'report-page': ``,
@@ -217,14 +218,15 @@ const form = {
     'report-page': '',
     'form-page': `
   <form class="form-row">
-  <div class="col-lg-9 col-md-9 col-sm-12 form-section grid" style="padding: 0px 10px;">
-  <div class="col-12"  style="display: flex;justify-content: flex-end;padding: 5px 20px;">
+  <div class="col-lg-9 col-md-9 col-sm-12 form-section">
+  <div class="col-12" style="display: flex;justify-content: flex-end;padding: 10px 20px;">
     <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" class="btn btn-success btn-sm">ADD NEW ENTRY</button>
    </div>
+   <div class="main-section"></div>
     
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container" style="border-left: 1px solid var(--border-color)">
-    <p><b>Summary Report</b></p>
+  <div class="col-lg-3 col-md-3 col-sm-12 form-section grid-container">
+    <p><b>Summary Entries</b></p>
     <div class="form-group grid-form-group">
       <label for="date-of-birth">Date</label>
       <input

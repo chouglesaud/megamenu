@@ -1,4 +1,4 @@
-function renderTopBarWith(name, btnName) {
+function renderTopBarWith(name, btnName = false) {
   return `<div class="top-bar row">
     <div class="form-label-container col-lg-9 col-md-9 col-sm-12">
       <h5>${name}</h5>
