@@ -11,7 +11,7 @@ function renderReportPageActionBar() {
         </button>
       </div>
       <div class="action-btn-container">
-        <button type="button" class="btn btn-light btn-sm sec-action">
+        <button type="button" class="btn btn-light btn-sm sec-action" id="printBtn">
         <span class="bi bi-printer-fill icon"></span> <span>Print</span>
         </button>
       </div>

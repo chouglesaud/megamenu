@@ -75,7 +75,14 @@ const form = {
           </form>
         </div>
       </div>`,
-    'print-page': '',
+    'print-page': `
+    <div class="col-lg-12 col-md-12 col-sm-12 form-section grid" style="display: flex;flex-direction: column;padding: 20px 10px !important;">
+      <div class="print-btn-container" style="width: 100%;display: flex;justify-content: center;">
+        <button class="btn btn-primary btn-sm" onclick="window.print()">PRINT</button>
+      </div>
+      <div class="main-section" style="padding: 0px 10px"></div>
+    </div>
+    `,
   },
   'employee-details': {
     'report-page': ``,

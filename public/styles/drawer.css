@@ -2,22 +2,48 @@
   display: none;
   min-width: 20%;
   height: 85vh;
+  overflow-y: scroll;
   border: 1px solid #ccc;
   border-bottom: none;
   border-top: none;
+  padding-bottom: 20px;
 }
 .drawer .drawer-container {
   padding: 10px !important;
   width: 100%;
+  margin-bottom: 10px;
 }
 .filter-header-container {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  top: 0px;
+  position: sticky;
+  background: #fff;
+  z-index: 500;
+  padding: 0px 0px 10px 0px;
 }
 .close-btn-container {
   padding: 5px 0px;
   display: flex;
   justify-content: flex-end;
+}
+
+.drawer ::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+.drawer ::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+/* Handle */
+.drawer ::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px !important;
+}
+.card-header {
+  padding: 4px !important;
 }

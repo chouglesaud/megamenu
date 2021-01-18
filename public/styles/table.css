@@ -1,3 +1,6 @@
+.table-responsive {
+  height: 70vh;
+}
 table {
   white-space: nowrap !important;
   border-radius: 4px;

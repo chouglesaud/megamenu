@@ -1,0 +1,69 @@
+.c-row,
+.c-col {
+  padding: 0px !important;
+}
+.image-container {
+  background: url(https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80)
+    no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-color: #6f7eaf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .header {
+  text-align: center;
+  color: #fff;
+}
+.form-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+.form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-group label {
+  width: 100% !important;
+}
+.login-form-group {
+  width: 70%;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.login-btn-container button {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.logo-header-contianer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-header-contianer .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

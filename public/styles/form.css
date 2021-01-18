@@ -11,6 +11,7 @@
   border-left: none;
   border-right: none;
   width: 100%;
+  z-index: 1000;
 }
 .top-bar .action-container {
   width: 100%;
@@ -128,7 +129,8 @@
 }
 .sec-action-select {
   padding: 5.5px 5px;
-  max-width: 80px;
+  min-width: 90px;
+  max-width: 120px;
 }
 .sec-action-select option {
   padding: 4px !important;

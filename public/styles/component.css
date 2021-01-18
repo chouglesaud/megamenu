@@ -1,5 +1,8 @@
 .btn,
 select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 70px;
   font-size: 0.875rem;
   font-weight: 400 !important;

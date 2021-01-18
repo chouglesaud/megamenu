@@ -53,18 +53,22 @@ function loadReportPageBy(name, id) {
   document.querySelector('.closebtn').addEventListener('click', () => {
     closeDrawer();
   });
+  document.querySelector('#printBtn').addEventListener('click', () => {
+    loadPrintPageBy(name, id);
+  });
 }
 function loadPrintPageBy(name, id) {
   const appId = '#app';
   const app = document.querySelector(appId);
-  app.innerHTML = renderTopBarWith(name, 'ADD NEW');
+  app.innerHTML = form[id]['print-page'];
+  reportTable.render();
 }
 /**
  * works for static html
  */
-document.querySelector('.filter').addEventListener('click', () => {
-  openDrawer();
-});
-document.querySelector('.closebtn').addEventListener('click', () => {
-  closeDrawer();
-});
+// document.querySelector('.filter').addEventListener('click', () => {
+//   openDrawer();
+// });
+// document.querySelector('.closebtn').addEventListener('click', () => {
+//   closeDrawer();
+// });
