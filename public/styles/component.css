@@ -7,11 +7,20 @@ select {
   font-size: 0.875rem;
   font-weight: 400 !important;
 }
+.btn-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+.btn-link:hover {
+  text-decoration: none !important;
+  color: inherit;
+}
 table tr:hover {
   background-color: #f7f8fa !important;
 }
 .sec-action {
   border: 1px solid var(--border-color) !important;
+  outline: none;
 }
 .icon {
   color: var(--icon-color);

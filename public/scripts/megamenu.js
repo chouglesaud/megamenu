@@ -31,4 +31,9 @@ $(document).ready(function () {
 
     return false;
   });
+  document.querySelectorAll('select').forEach((element) => {
+    element.addEventListener('change', (e) => {
+      e.target.setAttribute('title', e.target.value);
+    });
+  });
 });

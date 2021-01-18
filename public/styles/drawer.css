@@ -1,6 +1,6 @@
 .drawer {
   display: none;
-  min-width: 20%;
+  min-width: 22%;
   height: 85vh;
   overflow-y: scroll;
   border: 1px solid #ccc;
@@ -29,21 +29,45 @@
   display: flex;
   justify-content: flex-end;
 }
-
-.drawer ::-webkit-scrollbar {
-  width: 10px !important;
+.card {
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 0px;
+  padding: 0px;
 }
-
-/* Track */
-.drawer ::-webkit-scrollbar-track {
-  border-radius: 10px !important;
-}
-
-/* Handle */
-.drawer ::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px !important;
+.card button {
+  text-align: left !important;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0px 5px;
 }
 .card-header {
   padding: 4px !important;
+  border: none !important;
+}
+.card-body {
+  padding: 5px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-body div {
+  padding: 5px 0px;
+}
+.card-body .key {
+  width: 30% !important;
+}
+.card-body .key select {
+  max-width: 100%;
+}
+.card-body .value {
+  width: 68%;
+}
+.card-body input,
+select {
+  padding: 5px;
+  font-size: 0.8rem !important;
 }

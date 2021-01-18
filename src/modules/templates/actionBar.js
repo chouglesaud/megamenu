@@ -39,7 +39,7 @@ function renderReportPageActionBar() {
     <option value="email1"><span>Email 1</span></option>
     <option value="email2"><span>Email 2</span></option>
     <option value="email3"><span>Email 3</span></option>
-    <option value="email3"><span>VISIBLE HCF & UID BUTTONS ON REGISTRATION</span></option>
+    <option value="VISIBLE HCF & UID BUTTONS ON REGISTRATION"><span>VISIBLE HCF & UID BUTTONS ON REGISTRATION</span></option>
     </select>
   </div>
     

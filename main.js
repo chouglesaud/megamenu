@@ -24,7 +24,6 @@ allSubmenuLinks.forEach((link) => {
     loadReportPageBy(name, id);
   });
 });
-
 function loadFormPageBy(name, id, type) {
   const appId = '#app';
   const app = document.querySelector(appId);
@@ -66,9 +65,9 @@ function loadPrintPageBy(name, id) {
 /**
  * works for static html
  */
-// document.querySelector('.filter').addEventListener('click', () => {
-//   openDrawer();
-// });
-// document.querySelector('.closebtn').addEventListener('click', () => {
-//   closeDrawer();
-// });
+document.querySelector('.filter').addEventListener('click', () => {
+  openDrawer();
+});
+document.querySelector('.closebtn').addEventListener('click', () => {
+  closeDrawer();
+});
